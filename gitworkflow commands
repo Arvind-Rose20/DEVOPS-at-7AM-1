@@ -1,0 +1,30 @@
+sudo apt-get install git flow
+git flow init
+git branch -a
+clear
+git checkout -b feature_branch
+git flow feature start feature_branch
+ls
+vim helloworld.java
+git add helloworld.java
+git commit -m "helloworld.java is updated"
+git flow feature finish feature_branch
+git branch
+cat helloworld.java
+git checkout -b release/1.0
+git branch
+git flow release branch release/1.0
+git branch
+cat helloworld.java
+git checkout -u hotfix_branch
+git checkout -b hotfix_branch
+git branch
+git flow hotfix start hotfix_branch
+ls
+vim helloworld.java
+git add helloworld.java
+git commit -m "removed a line in helloworld.java file"
+git flow hotfix finsh hotfix_branch
+git flow hotfix finish hotfix_branch
+git branch
+cat helloworld.java
